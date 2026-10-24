@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: s3-file-storage
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+app:
+  s3:
+    endpoint: ${S3_ENDPOINT:http://localhost:4566}
+    region: ${AWS_REGION:eu-west-1}
+    bucket: ${S3_BUCKET:practice-file-uploads}
