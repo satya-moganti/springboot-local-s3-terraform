@@ -154,11 +154,3 @@ LocalStack data is ephemeral in this starter setup. Do not put important files i
 - **Terraform cannot connect:** the AWS provider endpoint settings are in `terraform/providers.tf`; LocalStack must be running first.
 - **Port in use:** stop the process occupying port 4566 or 8080, or adjust the Compose/application settings consistently.
 
-## Suggested extensions
-
-1. Add file-size and content-type validation.
-2. Add pagination for listing objects.
-3. Add unit tests with mocked `S3Client`.
-4. Add Testcontainers-based integration tests.
-5. Add an S3 lifecycle rule and bucket versioning in Terraform.
-6. Add a second profile for real AWS, using a separate configuration and explicit opt-in.
