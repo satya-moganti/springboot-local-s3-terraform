@@ -3,16 +3,8 @@
 A local-only practice project: Terraform provisions an S3 bucket in LocalStack, and a Spring Boot REST API uploads, lists, downloads, and deletes files in that bucket.
 
 ## Architecture
+![Spring Boot LocalStack S3 Terraform](architecture.png)
 
-```text
-Postman / curl
-     |
-     v
-Spring Boot (port 8080) -- AWS SDK for Java v2 --> LocalStack S3 (port 4566)
-                                                        ^
-                                                        |
-                                               Terraform provisions bucket
-```
 
 This project is configured for local development. It does not need an AWS account, but LocalStack's current image/version and licensing requirements may change. Check its current documentation before use.
 
